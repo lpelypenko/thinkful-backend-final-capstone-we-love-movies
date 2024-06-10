@@ -87,6 +87,7 @@ describe("Movie Routes", () => {
 
       expect(response.body.error).toBeUndefined();
       expect(response.body.data).toHaveLength(7);
+      console.log(response.body.data);
       response.body.data.forEach((review) => {
         expect(review).toHaveProperty("movie_id", previous.movie_id);
         expect(review).toHaveProperty(
